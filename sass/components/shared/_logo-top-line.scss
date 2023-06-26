@@ -1,0 +1,22 @@
+.webstudio {
+  margin-right: 93px;
+  margin-top: 24px;
+  margin-bottom: 25px;
+
+  &__link {
+    text-decoration: none;
+
+    &-web-name {
+      font-family: $fonttFamilyLogo;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 1.19;
+      letter-spacing: 0.03em;
+      color: getColor("main-blue");
+    }
+
+    &--highlight {
+      color: getColor("main-black");
+    }
+  }
+}

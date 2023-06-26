@@ -1,0 +1,7 @@
+.webstudio__footer-link {
+  @extend .webstudio;
+
+  &--highlight {
+    color: getColor("main-white");
+  }
+}

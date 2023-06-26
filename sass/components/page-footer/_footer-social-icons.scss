@@ -1,0 +1,40 @@
+.footer-social-icons {
+  &__description {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: getColor("main-white");
+    padding-bottom: 20px;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    padding-inline-start: 0;
+    justify-content: center;
+    gap: 10px;
+    list-style-type: none;
+
+    &-item {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background: rgba(255, 255, 255, 0.1);
+      transition: $transitionBgColor;
+
+      &:hover,
+      &:focus {
+        background: getColor("main-blue");
+      }
+
+      &-icon {
+        fill: getColor("main-white");
+      }
+    }
+  }
+}

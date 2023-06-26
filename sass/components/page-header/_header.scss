@@ -1,0 +1,22 @@
+.top-line-partition {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1600px;
+  height: 80px;
+  border-bottom: 1px solid getColor("line-color");
+  margin: auto;
+
+  &__left-side {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    padding-left: 215px;
+  }
+
+  &__right-side {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 227px;
+  }
+}

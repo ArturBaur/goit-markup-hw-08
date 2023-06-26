@@ -1,0 +1,23 @@
+.footer-partition {
+  display: flex;
+
+  &__left-side {
+    display: flex;
+
+    &-first-part {
+      padding-top: 60px;
+    }
+
+    &-second-part {
+      padding-top: 72px;
+      padding-left: 70px;
+    }
+  }
+  &__right-side {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    padding-top: 72px;
+    padding-left: 78px;
+  }
+}

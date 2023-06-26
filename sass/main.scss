@@ -1,0 +1,43 @@
+@use "./utils/vars" as *;
+
+//
+//      page-header
+//
+@import "components/page-header/header";
+@import "components/page-header/header-nav";
+@import "components/page-header/header-contacts";
+@import "components/page-header/header-bg";
+@import "components/page-header/header-bg-btn";
+
+//
+//      main-studio
+//
+@import "components/main-studio/studio-modal";
+@import "components/main-studio/studio-backdrop";
+@import "components/main-studio/studio-adwentages";
+@import "components/main-studio/studio-work";
+@import "components/main-studio/studio-team";
+@import "components/main-studio/studio-clients";
+
+//
+//      main-portfolio
+//
+@import "components/main-portfolio/portfolio-filters";
+@import "components/main-portfolio/portfolio-projects";
+
+//
+//      page-footer
+//
+@import "components/page-footer/_footer";
+@import "components/page-footer/_footer-bg";
+@import "components/page-footer/_footer-address";
+@import "components/page-footer/footer-social-icons";
+@import "components/page-footer/fotter-newsletter";
+
+//
+//      shared
+//
+@import "components/shared/logo-top-line";
+@import "components/shared/logo-footer";
+@import "components/shared/global_styles";
+@import "components/shared/header-primary";

@@ -1,0 +1,38 @@
+.advantages {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  padding-bottom: 94px;
+
+  &__rectangle {
+    width: 270px;
+    height: 120px;
+    background: getColor("second-white");
+    border-radius: 4px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    align-items: center;
+  }
+  &__name {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: getColor("mine-grey");
+    width: 270;
+    height: 75;
+  }
+}

@@ -1,0 +1,199 @@
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  background: getColor("main-white");
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  &__form {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-title {
+      font-family: $fontFamilyMain;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.15;
+
+      letter-spacing: 0.03em;
+
+      color: getColor("main-black");
+      padding-bottom: 12px;
+    }
+
+    &-rectangle {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding-left: 40px;
+      padding-right: 40px;
+      transition: $transitionFill, $transitionBgColor;
+
+      &:focus-within {
+        fill: getColor("main-blue");
+        border-color: getColor("main-blue");
+      }
+    }
+
+    &-label {
+      font-family: $fontFamilyMain;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1.17;
+      letter-spacing: 0.01em;
+      color: getColor("main-grey");
+
+      &-name {
+        padding-top: 10px;
+        padding-bottom: 4px;
+      }
+
+      &-icon {
+        position: absolute;
+        top: 39px;
+        left: 53px;
+      }
+    }
+
+    &-input {
+      width: 448px;
+      height: 40px;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      border-radius: 4px;
+      resize: none;
+      padding-left: 42px;
+      outline: none;
+      transition: $transitionBgColor;
+
+      &:focus-within {
+        border-color: getColor("main-blue");
+      }
+    }
+
+    &-comment {
+      width: 448px;
+      height: 120px;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      border-radius: 4px;
+      resize: none;
+      padding: 12px 16px 12px 16px;
+      outline: none;
+      transition: $transitionBorder;
+
+      &:focus-within {
+        border-color: getColor("main-blue");
+      }
+
+      &::placeholder {
+        font-family: $fontFamilyMain;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+      }
+    }
+
+    &-statement {
+      padding-top: 20px;
+      padding-bottom: 30px;
+
+      display: flex;
+      position: relative;
+      align-items: center;
+      gap: 8px;
+
+      &-description {
+        font-family: $fontFamilyMain;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: getColor("main-grey");
+      }
+
+      &-underline {
+        color: getColor("main-blue");
+        text-decoration: underline;
+      }
+    }
+
+    &-custom-checkbox {
+      width: 16px;
+      height: 15px;
+      border: 2px solid getColor("main-black");
+      background-color: getColor("main-white");
+      border-radius: 2px;
+    }
+
+    &-icon-check {
+      position: absolute;
+      top: 28px;
+      left: 3px;
+      fill: getColor("main-white");
+      cursor: pointer;
+    }
+
+    &-btn {
+      width: 200px;
+      height: 50px;
+
+      background: getColor("main-blue");
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      padding-bottom: 40px;
+
+      font-family: $fontFamilyMain;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.88;
+
+      letter-spacing: 0.06em;
+      color: getColor("main-white");
+      padding-top: 10px;
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: getColor("main-white");
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+input[type="checkbox"]:checked + .modal__form-custom-checkbox {
+  background-color: getColor("main-blue");
+  border: getColor("main-blue");
+  border-radius: 2px;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+
+  &:focus {
+    opacity: 1;
+    width: 16px;
+    height: 15px;
+    outline: 1px solid getColor("main-blue");
+    outline-offset: -1px;
+  }
+}

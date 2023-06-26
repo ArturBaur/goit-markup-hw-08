@@ -1,0 +1,40 @@
+.footer-address-list {
+  list-style: none;
+  padding-inline-start: 0;
+
+  &__item {
+    padding-bottom: 9px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &-location {
+      color: getColor("main-white");
+      font-size: 14px;
+      line-height: 1.71;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      transition: $transitionColor;
+
+      &:hover,
+      &:hover {
+        color: getColor("-main-blue");
+      }
+    }
+
+    &-link {
+      font-size: 14px;
+      line-height: 1.71;
+      letter-spacing: 0.03em;
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      transition: $transitionColor;
+
+      &:hover,
+      &:focus {
+        color: getColor("main-blue");
+      }
+    }
+  }
+}

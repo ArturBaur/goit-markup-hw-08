@@ -1,0 +1,40 @@
+.clients {
+  display: flex;
+  flex-direction: row;
+  padding-inline-start: 0;
+  justify-content: center;
+  gap: 30px;
+  list-style-type: none;
+  margin: 0;
+
+  &__rectangle {
+    width: 170px;
+    height: 92px;
+    border: 1px solid getColor("second-grey");
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transitionColor;
+
+    &:hover,
+    &:focus {
+      border: 1px solid getColor("main-blue");
+    }
+
+    &:hover > .clients-icon,
+    &:focus > .clients-icon {
+      fill: getColor("main-blue");
+    }
+  }
+
+  &__icon {
+    fill: getColor("second-grey");
+    transition: $transitionFill;
+
+    &:hover,
+    &:focus {
+      fill: getColor("main-blue");
+    }
+  }
+}
