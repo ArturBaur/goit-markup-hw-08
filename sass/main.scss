@@ -1,4 +1,15 @@
+//
+//      utils
+//
 @use "./utils/vars" as *;
+@import "./utils/mixins";
+@import "./utils/global_styles";
+
+//
+//      mobile
+//
+@import "components/mobile/header-mobile-menu-btn";
+@import "components/mobile/mobile-menu";
 
 //
 //      page-header
@@ -39,5 +50,4 @@
 //
 @import "components/shared/logo-top-line";
 @import "components/shared/logo-footer";
-@import "components/shared/global_styles";
 @import "components/shared/header-primary";

@@ -1,9 +1,17 @@
 .top-line-contacts {
-  display: flex;
-  justify-content: flex-start;
-  justify-content: space-between;
-  align-items: center;
-  gap: 50px;
+  display: none;
+  //display: flex;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    gap: 30px;
+  }
 
   &__link {
     text-decoration: none;

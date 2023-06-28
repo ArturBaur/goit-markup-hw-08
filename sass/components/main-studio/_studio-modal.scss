@@ -1,11 +1,16 @@
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   background: getColor("main-white");
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  @include desktop {
+    width: 528px;
+    height: 581px;
+  }
 
   &__form {
     padding-top: 40px;
@@ -62,7 +67,7 @@
     }
 
     &-input {
-      width: 448px;
+      width: 370px;
       height: 40px;
       border: 1px solid rgba(33, 33, 33, 0.2);
       border-radius: 4px;
@@ -71,13 +76,18 @@
       outline: none;
       transition: $transitionBgColor;
 
+      @include desktop {
+        width: 448px;
+        height: 40px;
+      }
+
       &:focus-within {
         border-color: getColor("main-blue");
       }
     }
 
     &-comment {
-      width: 448px;
+      width: 370px;
       height: 120px;
       border: 1px solid rgba(33, 33, 33, 0.2);
       border-radius: 4px;
@@ -85,6 +95,11 @@
       padding: 12px 16px 12px 16px;
       outline: none;
       transition: $transitionBorder;
+
+      @include desktop {
+        width: 448px;
+        height: 40px;
+      }
 
       &:focus-within {
         border-color: getColor("main-blue");
@@ -114,10 +129,16 @@
         font-family: $fontFamilyMain;
         font-style: normal;
         font-weight: 400;
-        font-size: 14px;
-        line-height: 1.71;
-        letter-spacing: 0.03em;
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.36px;
         color: getColor("main-grey");
+
+        @include desktop {
+          font-size: 14px;
+          line-height: 1.71;
+          letter-spacing: 0.03em;
+        }
       }
 
       &-underline {
@@ -136,10 +157,15 @@
 
     &-icon-check {
       position: absolute;
-      top: 28px;
+      top: 23px;
       left: 3px;
       fill: getColor("main-white");
       cursor: pointer;
+
+      @include desktop {
+        top: 28px;
+        left: 3px;
+      }
     }
 
     &-btn {

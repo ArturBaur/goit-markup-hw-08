@@ -1,6 +1,8 @@
 .footer-address-list {
   list-style: none;
   padding-inline-start: 0;
+  padding-top: 20px;
+  text-align: center;
 
   &__item {
     padding-bottom: 9px;
@@ -36,5 +38,13 @@
         color: getColor("main-blue");
       }
     }
+  }
+
+  @include tablet {
+    text-align: center;
+  }
+
+  @include desktop {
+    text-align: left;
   }
 }

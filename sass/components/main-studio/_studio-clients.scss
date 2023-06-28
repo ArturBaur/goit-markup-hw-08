@@ -1,14 +1,36 @@
 .clients {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   padding-inline-start: 0;
   justify-content: center;
   gap: 30px;
   list-style-type: none;
   margin: 0;
 
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30;
+
+    &-rectangle {
+      width: 226px;
+      height: 92px;
+    }
+  }
+
+  @include desktop {
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    &-rectangle {
+      width: 170px;
+      height: 92px;
+    }
+  }
+
   &__rectangle {
-    width: 170px;
+    width: 210px;
     height: 92px;
     border: 1px solid getColor("second-grey");
     border-radius: 4px;

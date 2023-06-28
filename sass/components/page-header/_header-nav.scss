@@ -1,5 +1,16 @@
 .top-line-menu-list {
-  display: flex;
+  display: none;
+
+  @include tablet {
+    display: flex;
+    margin-left: 83px;
+  }
+
+  @include desktop {
+    margin-left: 93px;
+  }
+
+  // display: flex;
   justify-content: space-between;
   list-style: none;
   gap: 46px;

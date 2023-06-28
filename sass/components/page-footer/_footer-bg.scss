@@ -1,5 +1,13 @@
 .footer-bg {
   background: getColor("background-grey");
-  height: 252px;
+  height: 603px;
   margin: auto;
+
+  @include tablet {
+    height: 463px;
+  }
+
+  @include desktop {
+    height: 252px;
+  }
 }

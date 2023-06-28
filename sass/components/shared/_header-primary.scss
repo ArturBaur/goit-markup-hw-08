@@ -5,4 +5,13 @@
   text-align: center;
   letter-spacing: 0.03em;
   padding-bottom: 50px;
+
+  &--none {
+    display: none;
+
+    @include desktop {
+      display: flex;
+      justify-content: center;
+    }
+  }
 }

@@ -1,0 +1,14 @@
+.mobile-menu-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    fill: getColor("main-blue");
+  }
+
+  @include tablet {
+    display: none;
+  }
+}

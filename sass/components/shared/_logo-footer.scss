@@ -1,5 +1,10 @@
 .webstudio__footer-link {
   @extend .webstudio;
+  text-align: center;
+
+  @include desktop {
+    text-align: left;
+  }
 
   &--highlight {
     color: getColor("main-white");
