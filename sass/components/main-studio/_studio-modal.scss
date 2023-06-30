@@ -1,15 +1,27 @@
 .modal {
   position: absolute;
-  width: calc(100% - 30px);
+  width: 50%;
+  min-width: 320px;
   height: 609px;
   background: getColor("main-white");
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 40px;
+
+  //justify-items: center;
+
+  @include tablet {
+    width: 450px;
+    height: 609px;
+  }
 
   @include desktop {
     width: 528px;
-    height: 581px;
+    height: 609px;
   }
 
   &__form {
@@ -19,6 +31,7 @@
     align-items: center;
 
     &-title {
+      text-align: center;
       font-family: $fontFamilyMain;
       font-style: normal;
       font-weight: 700;
@@ -67,7 +80,7 @@
     }
 
     &-input {
-      width: 370px;
+      min-width: 280px;
       height: 40px;
       border: 1px solid rgba(33, 33, 33, 0.2);
       border-radius: 4px;
@@ -75,6 +88,11 @@
       padding-left: 42px;
       outline: none;
       transition: $transitionBgColor;
+
+      @include tablet {
+        width: 370px;
+        height: 40px;
+      }
 
       @include desktop {
         width: 448px;
@@ -87,7 +105,7 @@
     }
 
     &-comment {
-      width: 370px;
+      min-width: 280px;
       height: 120px;
       border: 1px solid rgba(33, 33, 33, 0.2);
       border-radius: 4px;
@@ -96,9 +114,14 @@
       outline: none;
       transition: $transitionBorder;
 
+      @include tablet {
+        width: 370px;
+        height: 120px;
+      }
+
       @include desktop {
         width: 448px;
-        height: 40px;
+        height: 120px;
       }
 
       &:focus-within {
